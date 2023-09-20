@@ -42,8 +42,8 @@
             <th>Image</th>
             <th>Add</th>
         </tr>
+        <c:forEach items="${product}" var="porducts">
         <form action="/cart" method="post">
-            <c:forEach items="${product}" var="porducts">
                 <tr>
                     <td>${porducts.name}</td>
                     <input type="hidden" name="name" value="${porducts.name}">
@@ -57,8 +57,8 @@
                         <input type="submit" value="add to cart">
                     </td>
                 </tr>
-            </c:forEach>
         </form>
+        </c:forEach>
     </table>
 </div>
 </body>

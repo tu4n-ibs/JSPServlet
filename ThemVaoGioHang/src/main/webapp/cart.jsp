@@ -32,23 +32,24 @@
     }
 </style>
 <body>
-<div class="div">
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Image</th>
-        </tr>
-            <c:forEach items="${listCart}" var="porduct">
-                <tr>
-                    <td>${porduct.getName()}</td>
-                    <td>${porduct.getPrice()}</td>
-                    <td>
-                        <img src="${porduct.getImage()}">
-                    </td>
-                </tr>
-            </c:forEach>
-    </table>
-</div>
+    <div class="div">
+        <h2>My Cart</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+                <c:forEach items="${listCart}" var="porduct">
+                    <tr>
+                        <td>${porduct.getName()}</td>
+                        <td>${porduct.getPrice()}</td>
+                        <td>
+                            <img src="${porduct.getImage()}">
+                        </td>
+                    </tr>
+                </c:forEach>
+        </table>
+    </div>
 </body>
 </html>
